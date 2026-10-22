@@ -402,15 +402,25 @@ async function handleEnquiry(event) {
         message: form.querySelector("[name='message']")?.value.trim()
     };
 
-    const saved = await saveInquiry(data);
+    try {
+        const res = await fetch('/api/enquiry', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
 
-    if (saved) {
-        showToast(`Thank you${data.name ? ", " + data.name : ""}. We will be in touch within one working day.`);
-    } else {
-        showToast("Enquiry submitted. We will get back to you soon.");
+        if (res.ok) {
+            showToast(`Thank you${data.name ? ", " + data.name : ""}. We will be in touch within one working day.`);
+            form.reset();
+        } else {
+            const err = await res.json();
+            showToast(err.error || 'Failed to send. Please try again.');
+        }
+    } catch (err) {
+        console.error('Enquiry error:', err);
+        showToast('Failed to send. Please try again.');
     }
 
-    form.reset();
     submitBtn.disabled = false;
     submitBtn.innerHTML = originalText;
 }
@@ -541,6 +551,11 @@ async function init() {
 
     renderProducts("All");
     updateCartUI();
+
+    const enquiryForm = document.getElementById("enquiry-form-el");
+    if (enquiryForm) {
+        enquiryForm.addEventListener("submit", handleEnquiry);
+    }
 }
 
 init();

@@ -333,7 +333,7 @@
                     <div class="inquiry-card reveal" id="enquiry-form">
                         <h3>Send an enquiry</h3>
                         <p>Retail, bulk or gifting — tell us what you need and we will get back within one working day.</p>
-                        <form onsubmit="handleEnquiry(event)">
+                        <form id="enquiry-form-el" action="/api/enquiry" method="POST">
                             <div class="form-grid">
                                 <div class="field">
                                     <label for="enquiry-name">Name</label>
