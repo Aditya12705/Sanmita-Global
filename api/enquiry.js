@@ -1,5 +1,30 @@
 import nodemailer from 'nodemailer';
 
+async function sendWhatsApp(data) {
+  const apiKey = process.env.WHATSAPP_API_KEY;
+  const phoneNumber = process.env.WHATSAPP_PHONE_NUMBER; // e.g., "918951760948"
+
+  if (!apiKey || !phoneNumber) {
+    console.log('WhatsApp not configured, skipping');
+    return;
+  }
+
+  const text = `*New Sanmita Enquiry*\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Email:* ${data.email || 'Not provided'}\n*Interest:* ${data.interest || 'Not specified'}\n*Message:* ${data.message}`;
+
+  const url = `https://api.callmebot.com/whatsapp.php?phone=${phoneNumber}&text=${encodeURIComponent(text)}&apikey=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error('WhatsApp send failed:', response.statusText);
+    } else {
+      console.log('WhatsApp sent successfully');
+    }
+  } catch (err) {
+    console.error('WhatsApp error:', err);
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -42,6 +67,9 @@ export default async function handler(req, res) {
         </div>
       `,
     });
+
+    // Send WhatsApp notification (non-blocking)
+    await sendWhatsApp({ name, phone, email, interest, message });
 
     return res.status(200).json({ ok: true });
   } catch (err) {

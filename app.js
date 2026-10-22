@@ -16,7 +16,7 @@ const products = [
     { id: 15, name: "Fennel Seeds (Saunf)", category: "Seasoning", price: 300, originalPrice: 375, image: "assets/fennel.jpg", desc: "Sweet, refreshing mouth freshener and digestive aid — premium grade." },
     { id: 16, name: "Sesame Seeds (Til)", category: "Seasoning", price: 265, originalPrice: 330, image: "assets/sesame.jpg", desc: "Clean white sesame seeds for baking, tahini, and traditional sweets." },
     { id: 17, name: "Fenugreek Seeds (Methi)", category: "Seasoning", price: 160, originalPrice: 200, image: "assets/fennel.jpg", desc: "Bitter-aromatic seeds for curries, pickles, and health remedies." },
-    { id: 18, name: "Cloves Red (Lalpari)", category: "Spices", price: 1375, originalPrice: 1720, image: "assets/cloves.jpg", desc: "Premium red Lalpari cloves, strong aromatic, high oil content." },
+    { id: 18, name: "Cloves Red (Lalpari)", category: "Spices", price: 1375, originalPrice: 1720, image: "assets/clove-red.jpg", desc: "Premium red Lalpari cloves, strong aromatic, high oil content." },
     { id: 19, name: "Cloves Black", category: "Spices", price: 1225, originalPrice: 1530, image: "assets/cloves.jpg", desc: "Black cloves with intense flavor, ideal for spice blends and biryanis." },
     { id: 20, name: "Green Cardamom 6-7mm", category: "Spices", price: 3250, originalPrice: 4060, image: "assets/cardamom.jpg", desc: "Small green cardamom pods, intense aroma for sweets and chai." },
     { id: 21, name: "Green Cardamom 7-8mm", category: "Spices", price: 4560, originalPrice: 5700, image: "assets/cardamom.jpg", desc: "Bold green cardamom pods (7-8mm) with rich, complex aroma." },
