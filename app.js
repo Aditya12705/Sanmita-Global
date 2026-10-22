@@ -182,7 +182,7 @@ function renderProducts(filter = "All") {
                         <div class="price">
                             <strong>${formatINR(product.price)}</strong>
                             <span>/ kg</span>
-                            ${formatINR(product.originalPrice)} 
+                            <s>${formatINR(product.originalPrice)}</s>
                         </div>
                         <button type="button" class="add-btn" onclick="addToCart(${product.id})">
                             Add
