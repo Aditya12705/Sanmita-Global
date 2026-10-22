@@ -131,12 +131,13 @@ function renderProducts(filter = "All") {
     const positions = ["50% 42%", "50% 55%", "42% 50%", "58% 46%", "50% 62%"];
 
     isMobileView = window.innerWidth < 700;
-    const showPreview = isMobileView && filter === "All" && !mobileShowAll;
+    const previewCount = isMobileView ? 4 : 8;
+    const showPreview = filter === "All" && !mobileShowAll;
 
     let displayItems = filtered;
     if (showPreview) {
         if (mobilePreviewItems.length === 0) {
-            mobilePreviewItems = getRandomItems(filtered, 4);
+            mobilePreviewItems = getRandomItems(filtered, previewCount);
         }
         displayItems = mobilePreviewItems;
     } else {
@@ -145,7 +146,7 @@ function renderProducts(filter = "All") {
 
     if (count) {
         if (showPreview) {
-            count.textContent = `Showing ${displayItems.length} of ${filtered.length} ${labels[filter] || "products"} — tap a filter to see all`;
+            count.textContent = `Showing ${displayItems.length} of ${filtered.length} ${labels[filter] || "products"} ${isMobileView ? "— tap a filter to see all" : "— click \"View all\" to see all"}`;
         } else {
             count.textContent = `Showing ${filtered.length} of ${products.length} ${labels[filter] || "products"}`;
         }
@@ -181,7 +182,7 @@ function renderProducts(filter = "All") {
                         <div class="price">
                             <strong>${formatINR(product.price)}</strong>
                             <span>/ kg</span>
-                            <s>${formatINR(product.originalPrice)}</s>
+                            ${formatINR(product.originalPrice)} 
                         </div>
                         <button type="button" class="add-btn" onclick="addToCart(${product.id})">
                             Add
@@ -198,7 +199,7 @@ function renderProducts(filter = "All") {
         showAllBtn.type = "button";
         showAllBtn.className = "show-all-btn";
         showAllBtn.innerHTML = `
-            <span>View all 30 pantry staples</span>
+            <span>View all ${filtered.length} pantry staples</span>
             <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
         `;
         showAllBtn.onclick = () => {
