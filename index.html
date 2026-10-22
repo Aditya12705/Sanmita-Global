@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1d2922">
+    <meta name="description" content="Sanmita Globals — whole cashews, almonds, seeds, cardamom and everyday spices, chosen in small lots and packed fresh in Bengaluru.">
+    <title>Sanmita Globals — Nuts, Seeds &amp; Spices, Bengaluru</title>
+    <link rel="icon" href="Logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <symbol id="i-bag" viewBox="0 0 24 24">
+            <path d="M6.5 8.5h11l1 12h-13l1-12Z"/>
+            <path d="M9 9V6.75a3 3 0 0 1 6 0V9"/>
+        </symbol>
+        <symbol id="i-arrow-up" viewBox="0 0 24 24">
+            <path d="M7 17 17 7M8 7h9v9"/>
+        </symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24">
+            <path d="M4 12h15M13 6l6 6-6 6"/>
+        </symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12h14"/>
+        </symbol>
+        <symbol id="i-minus" viewBox="0 0 24 24">
+            <path d="M5 12h14"/>
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+            <path d="m6 6 12 12M18 6 6 18"/>
+        </symbol>
+        <symbol id="i-trash" viewBox="0 0 24 24">
+            <path d="M4 7h16M9 7V5h6v2M7 7l1 13h8l1-13M10 11v5M14 11v5"/>
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>
+        </symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+            <path d="m5 12 4 4L19 6"/>
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+        </symbol>
+    </svg>
+
+    <div class="announcement">
+        <div class="container announcement-inner">
+            <p>Freshly packed in Bengaluru · Store pickup available · Bulk orders welcome</p>
+            <p class="announcement-note">Vidhyaranyapura · Bengaluru</p>
+        </div>
+    </div>
+
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand" aria-label="Sanmita Globals home">
+                <img src="Logo.jpeg" alt="Sanmita Globals" class="brand-logo" width="52" height="52">
+                <span class="brand-copy">
+                    <span class="brand-name">Sanmita</span>
+                    <span class="brand-sub">Globals · Bengaluru</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#collections">Collections</a>
+                <a href="#products">The Pantry</a>
+                <a href="#story">Our Story</a>
+                <a href="#visit">Visit</a>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="cart-trigger" onclick="toggleCart()" aria-label="Open basket">
+                    <svg class="icon" aria-hidden="true"><use href="#i-bag"></use></svg>
+                    <span>Basket</span>
+                    <span class="cart-count" id="cart-badge">0</span>
+                </button>
+                <button type="button" class="menu-toggle" id="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="menu-label" id="menu-label">Menu</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="container mobile-menu-inner" aria-label="Mobile navigation">
+                <a href="#collections">Collections <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                <a href="#products">The Pantry <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                <a href="#story">Our Story <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                <a href="#visit">Visit <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                <a href="#visit" class="btn btn--ink">Plan a visit <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">A Bengaluru pantry · Freshly started</p>
+                    <h1>Goodness,<br><em>measured</em><br>by the gram.</h1>
+                    <p class="hero-lede">Whole cashews, fragrant cardamom, almonds and everyday spices — chosen in small lots, packed fresh, and sold at honest grades.</p>
+                    <div class="hero-actions">
+                        <a href="#products" class="btn btn--light">Explore the pantry <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+                        <a href="#visit" class="text-link">Visit the store <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                    </div>
+                    <div class="hero-proof" aria-label="The Sanmita range at a glance">
+                        <div class="proof-item"><strong>30</strong><span>pantry staples</span></div>
+                        <div class="proof-item"><strong>04</strong><span>collections</span></div>
+                        <div class="proof-item"><strong>01</strong><span>Bengaluru store</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-frame">
+                        <img src="assets/hero.jpg" alt="Walnuts, star anise, cinnamon and honey arranged on a wooden platter" width="430" height="538" fetchpriority="high">
+                        <div class="hero-stamp">
+                            <img src="Logo.jpeg" alt="" width="40" height="40">
+                            <span>Handpicked<br>in Bengaluru</span>
+                        </div>
+                    </div>
+                    <div class="hero-float hero-float--top">
+                        <span>House favourite</span>
+                        <strong>Cashew W240</strong>
+                        <small>₹1,175 / kg</small>
+                    </div>
+                    <div class="hero-float hero-float--bottom">
+                        <span>New season</span>
+                        <strong>Green Cardamom</strong>
+                        <small>₹4,560 / kg</small>
+                    </div>
+                    <div class="hero-caption">
+                        <span>01 / The pantry</span>
+                        <span>Nuts · Seeds · Spices</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span>Whole cashews</span><span>Green cardamom</span><span>Ceylon cinnamon</span><span>Cold-pressed seeds</span><span>Everyday spices</span><span>Slow-sourced</span>
+                </div>
+                <div class="marquee-group">
+                    <span>Whole cashews</span><span>Green cardamom</span><span>Ceylon cinnamon</span><span>Cold-pressed seeds</span><span>Everyday spices</span><span>Slow-sourced</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="intro" id="approach">
+            <div class="container intro-grid">
+                <div class="intro-copy reveal">
+                    <p class="kicker">01 / The Sanmita way</p>
+                    <h2 class="section-title">We buy the way we cook — <em>carefully.</em></h2>
+                    <p class="intro-note">No anonymous bins. No mystery grades. Every lot is tasted, sorted and packed by people who will look you in the eye at the counter.</p>
+                </div>
+                <div class="values reveal">
+                    <div class="value-row">
+                        <span class="value-num">01</span>
+                        <div>
+                            <h3>Grade before price</h3>
+                            <p>We choose the lot first, then negotiate. W180 is W180 — never a maybe.</p>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <span class="value-num">02</span>
+                        <div>
+                            <h3>Freshness by the week</h3>
+                            <p>Nuts and seeds are packed in small runs so the pantry stays crisp, not dusty.</p>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <span class="value-num">03</span>
+                        <div>
+                            <h3>One store, one standard</h3>
+                            <p>The same quality goes into a 250 g sample and a 25 kg wholesale order.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collections" id="collections">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="kicker">02 / The collections</p>
+                        <h2 class="section-title">Four shelves, <em>one standard.</em></h2>
+                    </div>
+                    <p class="section-intro">Start with a collection, or browse every grade in the pantry. Everything is priced by the kilo.</p>
+                </div>
+                <div class="collection-grid reveal">
+                    <a href="#products" class="collection-card" onclick="filterCategory('Nuts')">
+                        <img src="assets/cashew-bowl.jpg" alt="A bowl of whole cashews" loading="lazy">
+                        <span class="collection-number">01</span>
+                        <div class="collection-body">
+                            <span>07 staples</span>
+                            <h3>Nuts &amp; dried fruit</h3>
+                        </div>
+                        <span class="collection-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up"></use></svg></span>
+                    </a>
+                    <a href="#products" class="collection-card" onclick="filterCategory('Seeds')">
+                        <img src="assets/seeds.jpg" alt="Chia seeds" loading="lazy">
+                        <span class="collection-number">02</span>
+                        <div class="collection-body">
+                            <span>06 staples</span>
+                            <h3>Seeds</h3>
+                        </div>
+                        <span class="collection-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up"></use></svg></span>
+                    </a>
+                    <a href="#products" class="collection-card" onclick="filterCategory('Spices')">
+                        <img src="assets/spices.jpg" alt="Cinnamon, cloves and whole spices" loading="lazy">
+                        <span class="collection-number">03</span>
+                        <div class="collection-body">
+                            <span>13 staples</span>
+                            <h3>Whole spices</h3>
+                        </div>
+                        <span class="collection-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up"></use></svg></span>
+                    </a>
+                    <a href="#products" class="collection-card" onclick="filterCategory('Seasoning')">
+                        <img src="assets/cumin.jpg" alt="Cumin seeds in a wooden spoon" loading="lazy">
+                        <span class="collection-number">04</span>
+                        <div class="collection-body">
+                            <span>04 staples</span>
+                            <h3>Seasonings</h3>
+                        </div>
+                        <span class="collection-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up"></use></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog" id="products">
+            <div class="container">
+                <div class="catalog-top reveal">
+                    <div class="catalog-copy">
+                        <p class="kicker">03 / The pantry</p>
+                        <h2 class="section-title">Everyday essentials, <em>properly chosen.</em></h2>
+                        <p>Thirty staples for the kitchen, the desk drawer and the festive hamper. Filter by collection, add to your basket, and pick up at our Vidhyaranyapura counter.</p>
+                    </div>
+                    <div class="filters" role="group" aria-label="Filter products by collection">
+                        <button type="button" class="filter-pill" data-category="All" onclick="filterCategory('All')" aria-pressed="false">All <span>30</span></button>
+                        <button type="button" class="filter-pill" data-category="Nuts" onclick="filterCategory('Nuts')" aria-pressed="false">Nuts <span>07</span></button>
+                        <button type="button" class="filter-pill" data-category="Seeds" onclick="filterCategory('Seeds')" aria-pressed="false">Seeds <span>06</span></button>
+                        <button type="button" class="filter-pill" data-category="Spices" onclick="filterCategory('Spices')" aria-pressed="false">Spices <span>13</span></button>
+                        <button type="button" class="filter-pill" data-category="Seasoning" onclick="filterCategory('Seasoning')" aria-pressed="false">Seasoning <span>04</span></button>
+                    </div>
+                </div>
+                <div class="catalog-meta reveal">
+                    <p id="product-count" aria-live="polite">Showing 30 of 30 pantry staples</p>
+                    <span>Prices per 1 kg</span>
+                </div>
+                <div class="product-grid" id="product-grid"></div>
+                <p class="catalog-note">Imagery is representative of the range; natural variation in size, colour and crop may occur. For a current grade sheet or wholesale pricing, speak to the store.</p>
+            </div>
+        </section>
+
+        <section class="wholesale" aria-labelledby="wholesale-title">
+            <div class="container wholesale-inner">
+                <div>
+                    <p class="kicker">For kitchens &amp; gifting</p>
+                    <h2 id="wholesale-title">Buying by the kilo?<br><em>Let’s talk.</em></h2>
+                </div>
+                <p>Custom quantities, dependable grades and simple packing for cafés, cloud kitchens, hampers and family functions.</p>
+                <a href="#enquiry-form" class="btn btn--outline-light">Start a bulk enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+            </div>
+        </section>
+
+        <section class="story" id="story">
+            <div class="container story-grid">
+                <div class="story-figure reveal">
+                    <img src="assets/story.jpg" alt="Small bowls of whole spices, seeds and nutmeg" loading="lazy">
+                    <div class="story-badge">
+                        <strong>New</strong>
+                        <span>freshly started in Bengaluru</span>
+                    </div>
+                </div>
+                <div class="story-copy reveal">
+                    <p class="kicker">04 / Our story</p>
+                    <h2 class="section-title">A pantry built on <em>repeat customers.</em></h2>
+                    <p>Sanmita Globals began behind a modest counter in Vidhyaranyapura with a simple idea: sell the kind of nuts and spices you would serve your own family.</p>
+                    <p>We taste before we buy, sort before we pack, and refuse anything that needs a clever description.</p>
+                    <ul class="quality-list">
+                        <li><span class="check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>Small-lot sourcing, graded by hand</li>
+                        <li><span class="check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>Packed in Bengaluru, never over-seasoned</li>
+                        <li><span class="check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>The same quality for retail and wholesale</li>
+                    </ul>
+                    <p class="signature">— Sanmita Globals, Bengaluru</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit" id="visit">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="kicker">05 / Come by</p>
+                        <h2 class="section-title">Smell the difference <em>before you buy.</em></h2>
+                    </div>
+                    <p class="section-intro">Samples are open, questions are welcome, and there is always filter coffee nearby.</p>
+                </div>
+                <div class="visit-grid">
+                    <div class="contact-card reveal">
+                        <p class="kicker">Vidhyaranyapura, Bengaluru</p>
+                        <h3>Your neighbourhood spice counter.</h3>
+                        <p>Come in for a handful of cashews, a bag of cardamom, or a proper conversation about what is in season.</p>
+                        <div class="contact-lines">
+                            <div class="contact-line">
+                                <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+                                <div>
+                                    <strong>Find us</strong>
+                                    <address>30, 3rd Main Rd, Vidhyaranyapura<br>Simhadri Layout, Singapura<br>Bengaluru, Karnataka — 560097</address>
+                                </div>
+                            </div>
+                            <div class="contact-line">
+                                <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+                                <div>
+                                    <strong>Talk to us</strong>
+                                    <p><a href="https://wa.me/918951760948" target="_blank" rel="noopener">+91 89517 60948</a> · <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sanmitaglobal.com" target="_blank" rel="noopener">info@sanmitaglobal.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=30%2C%203rd%20Main%20Rd%2C%20Vidhyaranyapura%2C%20Simhadri%20Layout%2C%20Singapura%2C%20Bengaluru%2C%20Karnataka%20560097" class="contact-map" target="_blank" rel="noopener">Get directions <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></a>
+                    </div>
+                    <div class="inquiry-card reveal" id="enquiry-form">
+                        <h3>Send an enquiry</h3>
+                        <p>Retail, bulk or gifting — tell us what you need and we will get back within one working day.</p>
+                        <form onsubmit="handleEnquiry(event)">
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="enquiry-name">Name</label>
+                                    <input type="text" id="enquiry-name" name="name" placeholder="Your name" autocomplete="name" required>
+                                </div>
+                                <div class="field">
+                                    <label for="enquiry-phone">Phone</label>
+                                    <input type="tel" id="enquiry-phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" required>
+                                </div>
+                                <div class="field field--full">
+                                    <label for="enquiry-email">Email</label>
+                                    <input type="email" id="enquiry-email" name="email" placeholder="you@example.com" autocomplete="email">
+                                </div>
+                                <div class="field field--full">
+                                    <label for="enquiry-interest">I am interested in</label>
+                                    <select id="enquiry-interest" name="interest">
+                                        <option value="">Select a collection</option>
+                                        <option value="Nuts">Nuts &amp; dried fruit</option>
+                                        <option value="Seeds">Seeds</option>
+                                        <option value="Spices">Whole spices</option>
+                                        <option value="Seasoning">Seasonings</option>
+                                        <option value="Bulk">Bulk or corporate order</option>
+                                        <option value="Gifting">Gifting &amp; hampers</option>
+                                    </select>
+                                </div>
+                                <div class="field field--full">
+                                    <label for="enquiry-message">Your requirement</label>
+                                    <textarea id="enquiry-message" name="message" placeholder="Quantities, grades, delivery dates..." required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn--ink form-submit">Send enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+                            <p class="form-note">We will only use your details to respond to this enquiry.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-row">
+                        <img src="Logo.jpeg" alt="Sanmita Globals" loading="lazy" width="46" height="46">
+                        <span>Sanmita Globals</span>
+                    </div>
+                    <p>Nuts, seeds, spices and seasonings chosen with care in Bengaluru. Honest quality, one counter at a time.</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Explore</h3>
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="#home">Home</a>
+                        <a href="#collections">Collections</a>
+                        <a href="#products">The Pantry</a>
+                        <a href="#story">Our Story</a>
+                        <a href="#visit">Visit the Store</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="footer-title">Collections</h3>
+                    <nav class="footer-links" aria-label="Footer collections">
+                        <a href="#products" onclick="filterCategory('Nuts')">Nuts &amp; dried fruit</a>
+                        <a href="#products" onclick="filterCategory('Seeds')">Seeds</a>
+                        <a href="#products" onclick="filterCategory('Spices')">Whole spices</a>
+                        <a href="#products" onclick="filterCategory('Seasoning')">Seasonings</a>
+                    </nav>
+                </div>
+                <div class="footer-contact">
+                    <div>
+                        <h3 class="footer-title">Visit</h3>
+                        <address class="footer-address">30, 3rd Main Rd, Vidhyaranyapura<br>Simhadri Layout, Singapura<br>Bengaluru, Karnataka — 560097<br><a href="https://wa.me/918951760948" target="_blank" rel="noopener">+91 89517 60948</a><br><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sanmitaglobal.com" target="_blank" rel="noopener">info@sanmitaglobal.com</a></address>
+                    </div>
+                    <div class="newsletter">
+                        <form onsubmit="handleFooterNewsletter(event)">
+                            <label for="footer-email">Pantry notes</label>
+                            <div class="newsletter-row">
+                                <input type="email" id="footer-email" placeholder="Email address" autocomplete="email" required>
+                                <button type="submit" aria-label="Subscribe to pantry notes"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="year">2026</span> Sanmita Globals, Bengaluru. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Refund Policy</a>
+                    <span class="footer-credit">Photography via <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> &amp; <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-shell" id="cart-drawer" aria-hidden="true">
+        <button type="button" class="cart-backdrop" onclick="toggleCart()" tabindex="-1" aria-hidden="true"></button>
+        <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+            <div class="cart-head">
+                <div>
+                    <p class="kicker">Your selection</p>
+                    <h2 id="cart-title">Basket</h2>
+                </div>
+                <button type="button" class="cart-close" id="cart-close" onclick="toggleCart()" aria-label="Close basket">
+                    <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-foot">
+                <div class="cart-total-row">
+                    <span>Subtotal</span>
+                    <strong id="cart-total">₹0</strong>
+                </div>
+                <p>Prices are per kilo. We will confirm stock and pickup details when you check out.</p>
+                <button type="button" class="btn btn--ink cart-checkout" onclick="checkoutCart()">Request checkout <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+            </div>
+        </aside>
+    </div>
+
+    <button type="button" class="cart-float" id="cart-float" onclick="toggleCart(true)" aria-label="Open basket">
+    <svg class="icon" aria-hidden="true"><use href="#i-bag"></use></svg>
+    <span class="cart-float-count" id="cart-float-count">0</span>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
